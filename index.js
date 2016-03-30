@@ -63,7 +63,7 @@
           evt.stopPropagation();
           var source = evt.target;
           var found = false;
-          var ignoreClass = this.props.outsideClickIgnoreClass || IGNORE_CLASS;
+          var ignoreClass = (this.props ? this.props.outsideClickIgnoreClass : null) || IGNORE_CLASS;
           // If source=local then this event came from "somewhere"
           // inside and should be ignored. We could handle this with
           // a layered approach, too, but that requires going back to
